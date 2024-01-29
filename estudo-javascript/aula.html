@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="aula.js" defer></script>
+  <title>Aula</title>
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .controller{
+      display: flex;
+      justify-content: space-around;
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 5px;
+    }
+    .box{
+      width: 30%;
+      border: 1px solid #ddd;
+      padding: 15px 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    input,
+    #visor{
+      width: 150px;
+      border: 1px solid #000;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 2px;
+    }
+    input{
+      cursor: pointer;
+    }
+    #tela{
+      display: flex;
+      width: 100%;
+      /* border: 2px solid #333; */
+      min-height: 100vh;
+      min-height: fill-available;
+      min-height: -webkit-fill-available;
+      position: absolute;
+      background-color: #fff;
+      overflow: hidden;
+    }
+    .bola{
+      position: absolute;
+      border-radius: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div class="controller">
+    <div class="box">
+      <p>Número de objetos</p>
+      <div id="visor">0</div>
+    </div>
+    <div class="box">
+      <p>Quantidade de objetos</p>
+      <input type="number" value="0" min="0" id="txt_qtde">
+      <input type="button" value="Adicionar" id="btn_add">
+    </div>
+    <div class="box">
+      <input type="button" id="btn_remover" value="Remover Todos">
+    </div>
+  </div>
+  <div id="tela">
+
+  </div>
+</body>
+</html>
